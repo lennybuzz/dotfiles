@@ -1,0 +1,17 @@
+#!/bin/bash
+echo ' '
+ping -c 1 $1 
+
+echo '###################################'
+echo "Connecting to:" $1
+echo '###################################'
+
+echo  ' '
+echo -n Username:
+read username
+echo -n Domain:
+read domain
+echo -n Passwort:
+read -s password
+
+xfreerdp /clipboard /cert-ignore /size:1660x1000 /d:$domain /u:$username /p:$password /v:$1 &

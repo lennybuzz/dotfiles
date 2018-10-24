@@ -1,0 +1,9 @@
+#!/bin/bash
+VPNDIR=/media/truecrypt1
+TCDISK=/home/lenny/Documents/VPN_Neu/VPN_Neu
+
+if [ ! -e "$VPNDIR/tc" ]; then
+    truecrypt $TCDISK $VPNDIR
+fi
+
+xterm -T "VPN $1" -e "cd $VPNDIR/$1 && sudo openvpn $1.ovpn" &
