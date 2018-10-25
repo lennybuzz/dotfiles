@@ -1,84 +1,3 @@
-# This is the deepfield custom bashrc
-
-# Add bin directory to path
-#export PATH=$PATH:/opt/deepfield/bin
-
-# Add bag_bunker directory to path
-#export PATH=$PATH:/opt/deepfield/bag_bunker
-
-# Source ROS
-#source /opt/ros/indigo/setup.bash
-#[ -f ~/dep_ws/devel/setup.bash ] && source ~/dep_ws/devel/setup.bash
-#[ -f ~/catkin_ws/devel/setup.bash ] && source ~/catkin_ws/devel/setup.bash
-
-# Avoid Gazebo namespace warnings
-#export GAZEBO_MODEL_DATABASE_URI=""
-
-# Help Gazebo to find our models
-#[ -d ~/catkin_ws/src/deepfield/simulation/bonirob_simulator/bonirob_gazebo_models/models ] && export GAZEBO_MODEL_PATH="$HOME/catkin_ws/src/deepfield/simulation/bonirob_simulator/bonirob_gazebo_models/models":$GAZEBO_MODEL_PATH
-#[ -d ~/catkin_ws/src/fieldmobile/fieldmobile_base/models ] && export GAZEBO_MODEL_PATH="$HOME/catkin_ws/src/fieldmobile/fieldmobile_base/models":$GAZEBO_MODEL_PATH
-
-################################################################################
-# Functions
-################################################################################
-#function catkin_make_from_anywhere ()
-#{
-#  if [ -z "$1" ]; then
-#    NUM_JOBS=$(nproc)
-#  else
-#    NUM_JOBS=$1
-#  fi
-#  pushd .
-#  cd ~/catkin_ws
-#  catkin_make -DCMAKE_CXX_FLAGS=-Wall -j$NUM_JOBS
-#  success=$?
-#  popd
-#  return "$success"
-#}
-#
-#function df-clone()
-#{
-#  if [ -z "$1" ]; then
-#    echo "USAGE: df-clone REPO_NAME"
-#    return
-#  fi
-#
-#  git clone github.int.bosppaa.com:deepfield/$1.git
-#}
-#
-#function clean_catkin_ws()
-#{
-#  CK_TMP_DIR_NAME=/tmp/clean_catkin
-#  rm -rf $CK_TMP_DIR_NAME
-#  mkdir -p $CK_TMP_DIR_NAME
-#  mv ~/catkin_ws/build/ $CK_TMP_DIR_NAME/
-#  mv ~/catkin_ws/devel/ $CK_TMP_DIR_NAME/
-#}
-#
-#
-#function success ()
-#{
-#  SUCCESS=$?
-#  # Usage: $ command ; success "message"
-#  if [ $SUCCESS -eq 0 ]; then
-#    SUCCESS_MSG="$1 succeeded!"
-#    if [ "$DISPLAY" ]; then
-#      publish_cmd="notify-send -i emblem-default"
-#    else
-#      publish_cmd="echo"
-#    fi
-#  else
-#    SUCCESS_MSG="$1 failed!"
-#    if [ "$DISPLAY" ]; then
-#      publish_cmd="notify-send -i emblem-important"
-#    else
-#      publish_cmd="echo"
-#    fi
-#  fi
-#  $publish_cmd "$SUCCESS_MSG"
-#  return "$SUCCESS"
-#}
-#
 ################################################################################
 # Aliases
 ################################################################################
@@ -90,20 +9,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-
-# Sensible default parameters
-alias vi='vim'
-alias bc='bc -l'
-
-# ROS
-#alias cm='catkin_make_from_anywhere ; success "catkin_make"'
-#alias cm-verify='clean_catkin_ws; catkin_make_from_anywhere 1 ; success "CM Verification"'
-#alias ccd='cd ~/catkin_ws/src'
-
-# Bonirob
-#alias rnc='rosrun robot_node_commander robot_node_commander'
-#alias rmc='rnc;'
-#alias sshb='ssh -X -C build@192.168.1.10'
 
 alias rs='source ~/.bashrc'
 
