@@ -5,7 +5,7 @@
     "workbench.colorTheme": "Seti Monokai",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.tabSize": 2,
-    "editor.fontSize": 21,
+    "editor.fontSize": 17,
     "editor.formatOnPaste": false,
     "editor.minimap.enabled": false,
     "editor.fontLigatures": true,
@@ -23,6 +23,6 @@
         "progressBar.background": "#C6FF00",
         "pickerGroup.foreground": "#C6FF00",
         "tab.activeBorder": "#C6FF00",
-        "notificationLink.foreground": "#C6FF00"
+        "notificationLink.foreground": "#C6FF00",
     "workbench.startupEditor": "newUntitledFile"
 }
