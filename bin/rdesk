@@ -1,6 +1,6 @@
 #!/bin/bash
 echo ' '
-ping -c 1 $1 
+ping -c 1 $1
 
 echo '###################################'
 echo "Connecting to:" $1
@@ -14,4 +14,5 @@ read domain
 echo -n Passwort:
 read -s password
 
-xfreerdp /clipboard /cert-ignore /size:1660x1000 /d:$domain /u:$username /p:$password /v:$1 &
+xfreerdp +auto-reconnect /log-level:FATAL /gfx /network:auto /clipboard /cert-ignore /size:1593x900 /d:$domain /u:$username /p:$password /v:$1 &
+#xfreerdp /clipboard /cert-ignore /size:1660x1000 /d:$3 /u:$2 /p:$password /v:$1 &
