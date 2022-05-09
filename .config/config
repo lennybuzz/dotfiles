@@ -1,0 +1,34 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[keybindings]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    font = Anonymous Pro 12
+    foreground_color = "#ffffff"
+    use_system_font = False
+  [[vpn]]
+    cursor_color = "#aaaaaa"
+    font = Anonymous Pro 10
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      size = 900, 600
+      type = Window
+  [[vpn]]
+    [[[child1]]]
+      parent = window0
+      profile = vpn
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      size = 400, 200
+      type = Window
+[plugins]
