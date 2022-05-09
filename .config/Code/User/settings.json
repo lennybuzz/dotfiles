@@ -1,8 +1,6 @@
 {
     "editor.snippetSuggestions": "top",
     "editor.fontFamily": "Anonymous Pro",
-    "workbench.iconTheme": "eq-material-theme-icons",
-    "workbench.colorTheme": "Seti Monokai",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.tabSize": 2,
     "editor.fontSize": 17,
@@ -24,5 +22,5 @@
         "pickerGroup.foreground": "#C6FF00",
         "tab.activeBorder": "#C6FF00",
         "notificationLink.foreground": "#C6FF00",
-    "workbench.startupEditor": "newUntitledFile"
+    }
 }

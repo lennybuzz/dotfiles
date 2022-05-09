@@ -2,6 +2,8 @@
 
 export PATH=$PATH:$HOME/bin
 
+gsettings set org.gnome.desktop.interface enable-hot-corners true
+
 ###############################################################################
 # Aliases
 ################################################################################
@@ -14,6 +16,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+
+alias unetbootin_fix='sudo QT_X11_NO_MITSHM=1 unetbootin'
+alias ironman='rdesk ironman'
+alias fix_keepassxc='sudo rm /usr/local/lib/libykpers-1.so.1 && sudo ln -s /usr/lib/x86_64-linux-gnu/libykpers-1.so.1.20.0 /usr/local/lib/libykpers-1.so.1'
 
 function mkcd()
 {
