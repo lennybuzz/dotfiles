@@ -7,12 +7,11 @@ echo "Connecting to:" $1
 echo '###################################'
 
 echo  ' '
-echo -n Username:
-read username
-echo -n Domain:
-read domain
-echo -n Passwort:
-read -s password
 
-xfreerdp +auto-reconnect /log-level:FATAL /gfx /network:auto /clipboard /cert-ignore /size:1593x900 /d:$domain /u:$username /p:$password /v:$1 &
-#xfreerdp /clipboard /cert-ignore /size:1660x1000 /d:$3 /u:$2 /p:$password /v:$1 &
+read -p "Username: " username
+read -p "Domain: " domain
+read -p "Passwort: " -s password
+read -p "SEC: " sec
+sec=${sec:-rdp}
+
+xfreerdp +auto-reconnect /log-level:FATAL /gfx /network:auto /clipboard /cert-ignore /sec:$sec /size:1593x900 /d:$domain /u:$username /p:$password /v:$1 &
