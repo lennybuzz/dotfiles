@@ -11,7 +11,7 @@ echo  ' '
 read -p "Username: " username
 read -p "Domain: " domain
 read -p "Passwort: " -s password
-read -p "SEC: " sec
-sec=${sec:-rdp}
+#read -p "SEC: " sec
+#sec=${sec:-rdp}
 
-xfreerdp +auto-reconnect /log-level:FATAL /gfx /network:auto /clipboard /cert-ignore /sec:$sec /size:1593x900 /d:$domain /u:$username /p:$password /v:$1 &
+xfreerdp +auto-reconnect /log-level:FATAL /gfx /network:auto /clipboard /cert-ignore /sec:nla /size:1593x900 /d:$domain /u:$username /p:$password /v:$1 &
