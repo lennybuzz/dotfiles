@@ -6,4 +6,4 @@ if [ ! -e "$VPNDIR/tc" ]; then
     veracrypt -tc --use-dummy-sudo-password $TCDISK $VPNDIR
 fi
 
-terminator -p vpn -l vpn -T "VPN $1" -e "cd $VPNDIR/$1 && sudo openvpn --config $1.ovpn --tls-cipher DEFAULT:@SECLEVEL=0" &
+terminator -p vpn -l vpn -T "VPN $1" -e "cd $VPNDIR/$1 && sudo openvpn --config $1.ovpn --tls-cipher DEFAULT:@SECLEVEL=0 --tls-version-min 1.0 --data-ciphers AES-128-CBC" &
